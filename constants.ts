@@ -1,0 +1,248 @@
+import { ServiceItem, TeamMember, CoreValue, Affiliate } from './types';
+
+export const CORE_VALUES: CoreValue[] = [
+  {
+    id: "01",
+    title: "Client-Centricity and Global Perspective",
+    subtitle: "Your growth is our priority.",
+    description: "Local expertise, global standards."
+  },
+  {
+    id: "02",
+    title: "Integrity and Excellence",
+    subtitle: "Transparency & ethics in every action.",
+    description: "Technology enabled scalable solutions."
+  },
+  {
+    id: "03",
+    title: "Innovation and Collaboration",
+    subtitle: "Adopting modern, future-ready practices.",
+    description: "Working together to optimize ideas, skills, and resources to achieve business goals."
+  }
+];
+
+export const SERVICES: ServiceItem[] = [
+  {
+    category: "Accounting Services",
+    items: [
+      "Bookkeeping & Financial Statement Preparation",
+      "Management Accounting & Payroll",
+      "Fixed Asset Register & Inventory",
+      "Bank Reconciliation & Software Support",
+      "IFRS/IPSAS Reporting",
+      "Cost Accounting & Revenue Recognition",
+      "Budgeting & Forecasting",
+      "AP/AR Management",
+      "Policy & Procedure Development"
+    ]
+  },
+  {
+    category: "Taxation Services",
+    items: [
+      "CIT, PIT/PAYE, VAT, WHT",
+      "Tax Planning & Transfer Pricing",
+      "Tax Health Checks & Audit Representation",
+      "International Tax, PPT & Royalties",
+      "CGT, Stamp Duties, M&A Tax Due Diligence",
+      "Tax Clearance & Tax Tech Tools",
+      "Pioneer Status & Import Duty Waivers"
+    ]
+  },
+  {
+    category: "Audit & Assurance",
+    items: [
+      "Statutory, Internal, Forensic Audit",
+      "Tax Audit Support & Risk-Based Audit",
+      "Compliance & ESG Audit",
+      "Value-for-Money & Donor-Funded Audit",
+      "Fraud Detection",
+      "Corporate Governance Reviews",
+      "Special Investigations"
+    ]
+  },
+  {
+    category: "Management Services",
+    items: [
+      "Strategic Planning & BPR",
+      "Financial Analysis & Budgeting",
+      "Operations & Change Management",
+      "HR & Payroll, Corporate Governance",
+      "KPI Design & MIS Setup",
+      "Executive Support & Capacity Building",
+      "M&A Integration & Feasibility Studies"
+    ]
+  },
+  {
+    category: "Advisory Services",
+    items: [
+      "Financial & Business Advisory",
+      "Restructuring & Capital Structuring",
+      "PPP & Regulatory Compliance",
+      "Digital Transformation & GRC Frameworks",
+      "Debt Recovery & ESG",
+      "IPO Readiness & Transaction Services",
+      "Start-up & SME Advisory"
+    ]
+  },
+  {
+    category: "IT Services",
+    items: [
+      "ERP & Anti-Money Laundering Solutions",
+      "Omni-Channel Helpdesk & RPA",
+      "Access Management & Email Solutions",
+      "IT Hardware, Accessories & Security",
+      "AI Powered Chat/Voice Bots",
+      "Fraud Risk Management",
+      "Omni-Channel Marketing Automation"
+    ]
+  },
+  {
+    category: "Specialized & Other",
+    items: [
+      "Loan Syndication (Origination to Exit)",
+      "Process Audit (Procurement to IT)",
+      "SOP Preparations",
+      "Merger, Acquisition & Takeover Tax",
+      "Recruitment & Placement",
+      "Training (Technical, Soft Skills, Leadership)",
+      "Business Turnaround & Crisis Management",
+      "Business Set-Up & Legal Registration",
+      "Insurance Advisory Services"
+    ]
+  }
+];
+
+export const TEAM: TeamMember[] = [
+  {
+    name: "Anthony Idigbe",
+    role: "Chairman",
+    qualifications: "SAN, Ph.D. (Osgoode)",
+    bio: "Senior Partner at PUNUKA Attorneys & Solicitors. President of PUNUKA Consulting Inc. Experienced corporate director and board chair (Capital Hotel Plc, Ikeja Hotel Plc). Licensed to practice law in Nigeria and Ontario, Canada.",
+    location: "Lagos"
+  },
+  {
+    name: "Ramesh Biswal",
+    role: "Managing Director",
+    qualifications: "B. Com (Hons), FCA, FCS",
+    bio: "38+ years progressive leadership experience, 28 years in Africa. Expert in strategic financial management, fund syndication, IPOs, M&A, and ESG principles.",
+    location: "Lagos"
+  },
+  {
+    name: "Adeboye Joseph Taiwo",
+    role: "Board Member & Director",
+    qualifications: "FCA, ACTI, CISA, CISM",
+    bio: "25+ years experience across banking, investment management, taxation, auditing, and risk advisory. Deep expertise in market and credit risk, M&A, and financial strategy.",
+    location: "Pan Africa"
+  },
+  {
+    name: "Sonali Pradhan",
+    role: "Founding Shareholder & Director",
+    qualifications: "M.Sc in Botany",
+    bio: "25+ years experience in Travel and Metal industries. Faculty and skill development mentor. Passionate about empowering women entrepreneurs.",
+    location: "Global"
+  },
+  {
+    name: "Chinedu C Onyia",
+    role: "Associate Consultant",
+    qualifications: "B.Sc Chemical Engineering, Fellow CIBN, FCIA, LBS",
+    bio: "23+ years in Corporate Banking (IMB, Citi Bank, Keystone). Strong expertise in business development, strategy formulation, and change management.",
+    location: "Lagos"
+  },
+  {
+    name: "Shekhar Kar",
+    role: "Associate Consultant",
+    qualifications: "B.E. Mechanical, MBA",
+    bio: "35+ years technical commercial exposure in steel and aluminum industry. Expert in plant operations, project implementation, and supply chain.",
+    location: "Nigeria"
+  },
+  {
+    name: "Ajay Giri",
+    role: "Associate Consultant",
+    qualifications: "B.Com, FCA, MBA",
+    bio: "Seasoned CFO with 24+ years experience. Specialist in financial transformation, operational excellence, and cost optimization ($2.5M+ saved annually).",
+    location: "Lagos"
+  },
+  {
+    name: "Sukanta Beura",
+    role: "Associate Consultant",
+    qualifications: "FCA, FCS, LLB",
+    bio: "35+ years leadership. Expert in large-scale operations, digital transformation, AI, RPA, and cloud technologies in Fortune 500 environments.",
+    location: "Global Office / Mumbai"
+  },
+  {
+    name: "Manoj Chanduka",
+    role: "Associate Consultant",
+    qualifications: "B.Com (Hons), FCA, FCS",
+    bio: "35 years post-qualification experience (Adani Group, Public Financial Institutions). Expert in project appraisal, fund management, and regulatory frameworks.",
+    location: "Global Office / Ahmedabad"
+  },
+  {
+    name: "Jaladhar Swain",
+    role: "Associate Consultant",
+    qualifications: "B.Com (Hons), FCA",
+    bio: "25+ years as project consultant. Deep expertise in critical project analysis, stressed asset management, private equity, and forensic audits.",
+    location: "Global Office / Kolkata"
+  },
+  {
+    name: "B N Mohanty",
+    role: "Associate Consultant",
+    qualifications: "B.Com (Hons), FCA",
+    bio: "Managing Partner of B N Mohanty & Associates. Extensive expertise in Corporate Income Tax, Audit, GST, and Tax Planning.",
+    location: "Global Office / Puri"
+  },
+  {
+    name: "Parth Sarathi Choudhury",
+    role: "Associate Consultant",
+    qualifications: "B.Com, LLB, MBA",
+    bio: "Corporate Lawyer and Business Consultant with 20+ years. Managing Partner of Elevate Business Solutions DMCC (UAE).",
+    location: "Global Office / Dubai"
+  },
+  {
+    name: "Sarbeswar Sahoo",
+    role: "Associate Consultant",
+    qualifications: "M.Com, MBA, FIII, ACIN",
+    bio: "34+ years in insurance and risk management. Former CEO/CRO at Prestige Assurance (Nigeria). Best CEO among Nigerian insurers (2020).",
+    location: "Risk & Insurance - Global"
+  },
+  {
+    name: "Amish Mehta",
+    role: "Advisor & Mentor",
+    qualifications: "FCA, FCS, LLB",
+    bio: "40+ years experience in India, London, Singapore. Board member across diverse industries. Focus on M&A, JVs, compliance, and systems.",
+    location: "Singapore & London"
+  },
+  {
+    name: "Bijaya Krishna Dash",
+    role: "Advisor & Associate Consultant",
+    qualifications: "B.Com(Hons), FCA, DISA, CAAT, IFRS",
+    bio: "42+ years experience. Managing Partner of LALDASH & CO. Specialized in Forensic and Fraud Audits, Tax Planning, and Corporate Governance.",
+    location: "Pan India"
+  }
+];
+
+export const AFFILIATES: Affiliate[] = [
+  {
+    name: "Adeboye Taiwo & Co.",
+    description: "A Chartered Accountant Firm located in PAN NIGERIA cities."
+  },
+  {
+    name: "Infytel Communications Limited",
+    description: "A Technology firm in Nigeria providing ERP, AML Solutions, RPA, AI Chat Bots, and Cyber Security."
+  },
+  {
+    name: "Lal Dash & Co.",
+    description: "A Chartered Accountant Firm in Bhubaneswar, India, capable of delivering assignments globally."
+  },
+  {
+    name: "Punuka Attorneys & Solicitors",
+    description: "Full-service Nigerian law firm. Corporate law, dispute resolution, banking finance, and regulatory compliance."
+  }
+];
+
+export const CONTACT_INFO = {
+  addressLagos1: "Block H, 3rd floor, Nigerian Institution of Surveyors Building, Opp. Lagos State Revenue House, CBD Alausa, Ikeja, Lagos",
+  addressLagos2: "Office II- 8 Egebeyemi street, Ilupeju, Lagos",
+  globalLocations: "Abuja | Ilorin | Kano | India | Singapore | UK | Dubai | Kenya",
+  phones: ["+234-90-2000-7000", "+234-802-692-2332", "+234-803-580-2699"],
+  email: "darubrahmaindimak@gmail.com"
+};
