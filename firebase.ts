@@ -20,22 +20,45 @@ const db = getFirestore(app);
 export { db };
 
 export async function saveLead(data: any) {
-    console.log('Saving lead to Firebase (DIMAK):', data);
+    console.log('Initiating lead capture (DIMAK):', data);
+    const leadData = {
+        ...data,
+        source: 'DIMAK Corporate',
+        timestamp: new Date().toISOString()
+    };
+
     try {
-        const leadData = {
-            ...data,
-            source: 'DIMAK Corporate',
-            timestamp: new Date().toISOString()
-        };
-        const docRef = await addDoc(collection(db, "leads"), leadData);
-        console.log("Lead document written with ID: ", docRef.id);
+        // 1. Trigger email notification immediately (don't wait for Firestore)
+        const emailPromise = sendLeadNotification(leadData)
+            .then(success => {
+                if (success) console.log("Email notification sent successfully");
+                else console.error("Email notification returned false");
+                return success;
+            })
+            .catch(err => {
+                console.error("Email notification promise failed:", err);
+                return false;
+            });
 
-        // Trigger email notification
-        sendLeadNotification(leadData).catch(err => console.error("Email notification failed:", err));
+        // 2. Start Firestore write in parallel
+        const firestorePromise = addDoc(collection(db, "leads"), leadData)
+            .then(docRef => {
+                console.log("Lead document written with ID: ", docRef.id);
+                return docRef.id;
+            })
+            .catch(e => {
+                console.error("Firestore write failed:", e);
+                return null;
+            });
 
-        return docRef.id;
+        // 3. Wait for the email to attempt to send before resolving
+        // This ensures the user sees 'Success' even if Firestore is lagging
+        await emailPromise;
+        
+        // We return the firestore promise result but it's now decoupled from the UI hang
+        return await firestorePromise;
     } catch (e) {
-        console.error("Error adding lead: ", e);
+        console.error("Critical error in saveLead:", e);
         throw e;
     }
 }
